@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    padding: 20px;
+}
+
+button {
+    background-color: #ffeb3b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fdd835;
+}
+
+#table-container {
+    background-color: #006400;
+    border: 5px solid #8b4513;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hand {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: inline-block;
+    width: 50px;
+    height: 75px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 5px;
+    line-height: 75px;
+    font-weight: bold;
+    transition: transform 0.5s, box-shadow 0.5s;
+    font-size: 24px; /* Aumentar tamaño de fuente para emojis */
+}
+
+.card.dealt {
+    transform: translateY(-20px);
+}
+
+#game-messages {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.win {
+    color: #4caf50;
+    animation: win-animation 1s infinite;
+}
+
+.lose {
+    color: #f44336;
+    animation: lose-animation 1s infinite;
+}
+
+@keyframes win-animation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes lose-animation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+}
+
+#rules {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #4caf50;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#rules h2 {
+    margin-top: 0;
+}
+
+#rules ol {
+    padding-left: 20px;
+}
+
+#rules li {
+    margin: 10px 0;
+}
+
+#betting-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    #betting-container {
+        flex-direction: column;
+    }
+    
+    #chips-image {
+        max-width: 200px;
+    }
+}
+
+#chips-image {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+    max-width: 100px; /* Asegura que la imagen no sea demasiado grande */
+    border-radius: 50%; /* Hacer la imagen redonda */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para transformaciones y sombras */
+    cursor: pointer; /* Cambiar el cursor a pointer */
+    background-image: url('images/chip-transparent.png'); /* Usar la imagen con fondo transparente */
+    background-size: cover; /* Ajustar la imagen al contenedor */
+}
+
+#chips-image:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Añadir sombra al pasar el cursor */
+}
+
+#bet-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bet-button {
+    background-color: #ffeb3b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-button:hover {
+    background-color: #fdd835;
+}
+
+#chips-container {
+    margin-top: 20px;
+}
+
+.chip {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+#balance-container {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.balance-animation {
+    animation: balance-animation 1s infinite;
+}
+
+@keyframes balance-animation {
+    0%, 100% { color: white; }
+    50% { color: yellow; }
+}
+
+#warning-message {
+    display: none;
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}

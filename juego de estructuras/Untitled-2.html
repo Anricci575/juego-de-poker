@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Póker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Juego de Póker</h1>
+        <button id="deal-button" disabled>Repartir Cartas</button>
+        <div id="table-container">
+            <div id="player-hand" class="hand"></div>
+            <div id="dealer-hand" class="hand"></div>
+        </div>
+        <div id="game-messages"></div>
+        <div id="betting-container">
+            <div id="chips-image-container">
+                <img id="chips-image" 
+                     src="https://static.vecteezy.com/system/resources/previews/033/981/852/original/red-poker-game-chip-isolated-illustration-vector.jpg" 
+                     alt="Fichas de póker">
+            </div>
+            
+            <div id="bet-buttons-container">
+                <button class="bet-button" data-value="5">5</button>
+                <button class="bet-button" data-value="10">10</button>
+                <button class="bet-button" data-value="25">25</button>
+                <button class="bet-button" data-value="35">35</button>
+                <button class="bet-button" data-value="50">50</button>
+                <button class="bet-button" data-value="100">100</button>
+                <button class="bet-button" data-value="200">200</button>
+                <button class="bet-button" data-value="500">500</button>
+                <button class="bet-button" data-value="1000">1000</button>
+            </div>
+        </div>
+        <div id="chips-container"></div>
+        <div id="balance-container">Saldo: <span id="player-balance">1000</span></div>
+        <div id="warning-message">No tienes suficiente saldo para apostar.</div>
+        <div id="rules">
+            <h2>Reglas del Juego</h2>
+            <ol>
+                <li>Aprende el ranking de las manos de póker.</li>
+                <li>Conoce las posiciones en la mesa.</li>
+                <li>Actúa en el pre-flop: tírate, baja o sube.</li>
+                <li>Juega el flop: pasa, apuesta, paga, tírate o sube.</li>
+                <li>Responde al turn: pasa, apuesta, paga, tírate o sube.</li>
+                <li>Decide en el river si vas de farol o de verdad.</li>
+                <li>Muestra las cartas en el showdown.</li>
+                <li>Prepárate para la nueva mano.</li>
+            </ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
